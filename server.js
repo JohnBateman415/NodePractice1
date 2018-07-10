@@ -2,8 +2,10 @@ var _ = require ("lodash");
 var fs = require("fs");
 
 var randomNumber = _.random(-6,10);
-
+var textToWrite = "here you text";
 var fileContents = fs.readFileSync("server.js","utf-8");
+
+fs.writeFileSync('text.txt', textToWrite);
 
 console.log("random is "+ randomNumber);
 
